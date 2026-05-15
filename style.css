@@ -23,8 +23,16 @@ body {
   padding: 20px;
 }
 
-.hero h1 {
-  font-size: 3rem;
+.course-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.project-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0;
 }
 
 .hero p {
