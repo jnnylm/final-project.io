@@ -65,6 +65,23 @@ body {
   background: #f3f4f6;
 }
 
+
+.stat-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  color: white;
+  border-radius: 16px;
+  margin: 40px 0;
+}
+
+.big-stat {
+  font-size: 6rem;
+  font-weight: 800;
+  margin: 20px 0;
+  letter-spacing: 2px;
+}
+
 /* GRID CARDS */
 .grid {
   display: grid;
