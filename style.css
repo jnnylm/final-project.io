@@ -311,3 +311,25 @@ footer {
 .stats-table td {
   color: #111827;
 }
+
+.project-link {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.colab-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 24px;
+  background: #f9ab00;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.colab-btn:hover {
+  background: #e69500;
+  transform: translateY(-2px);
+}
