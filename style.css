@@ -312,24 +312,52 @@ footer {
   color: #111827;
 }
 
-.project-link {
+.colab-section {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 60px;
+  padding: 50px 20px;
+  background: #f8f9ff;
+  border-radius: 18px;
+}
+
+.colab-section h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.colab-section p {
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .colab-btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 24px;
+  padding: 14px 28px;
   background: #f9ab00;
   color: white;
   text-decoration: none;
-  border-radius: 10px;
-  font-weight: bold;
+  border-radius: 12px;
+  font-weight: 600;
   transition: 0.3s ease;
 }
 
 .colab-btn:hover {
+  transform: translateY(-3px);
   background: #e69500;
-  transform: translateY(-2px);
 }
+
+.colab-btn.secondary {
+  background: #4f46e5;
+}
+
+.colab-btn.secondary:hover {
+  background: #4338ca;
+}
+
