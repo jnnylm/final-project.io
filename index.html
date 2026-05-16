@@ -3,187 +3,385 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ChatGPT Data Analysis</title>
+  <title>Final Project</title>
 
   <link rel="stylesheet" href="style.css"/>
 
-  <!-- AOS -->
+  <!-- AOS animation library -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav class="sticky-nav">
-  <a href="#about">About</a>
-  <a href="#data">Data</a>
-  <a href="#usage">Usage</a>
-  <a href="#interaction">Interaction</a>
-  <a href="#temporal">Temporal</a>
-  <a href="#complexity">Complexity</a>
-  <a href="#insight">Insight</a>
-</nav>
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <h2 class="course-title" data-aos="fade-up">
+      CS-215 Final Project
+    </h2>
+  
+    <h1 class="project-title" data-aos="fade-up" data-aos-delay="100">
+      ChatGPT Data Analysis
+    </h1>
+  
+    <p data-aos="fade-up" data-aos-delay="200">
+      Jenny Lim
+    </p>
+  
+    <a href="#about" class="btn" data-aos="fade-up" data-aos-delay="300">
+      Explore
+    </a>
+  </header>
+  
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2 data-aos="fade-right">About This Project</h2>
+    <p data-aos="fade-left">
+    This project analyzes how students from different academic majors use ChatGPT between September 2025 and March 2026. The dataset combines ChatGPT conversation histories from multiple majors, including Math/Engineering, Physics, Physics-Math, Physics/Engineering and Biology, and examines differences in usage behavior, interaction patterns, and prompt complexity.
+    </p>
+  </section>
 
-<!-- HERO -->
-<header class="hero">
-  <h2 class="course-title">CS-215 Final Project</h2>
-  <h1 class="project-title">ChatGPT Data Analysis</h1>
-  <p>Jenny Lim</p>
-  <a href="#about" class="btn">Explore</a>
-</header>
+  <!-- BIG STAT HIGHLIGHT -->
+  <section class="stat-section" data-aos="zoom-in">
+    <h2>Total Chat Messages</h2>
+    <div class="big-stat">5,276</div>
+    <p>messages analyzed across all academic majors</p>
+  </section>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-  <h2>About This Project</h2>
-  <p>
-    This project analyzes how students from different academic majors use ChatGPT between September 2025 and March 2026.
-  </p>
-</section>
+  <!-- RESEARCH QUESTIONS -->
+  <section class="section dark">
+    <h2 data-aos="fade-up">Research Questions</h2>
+  
+    <div class="grid">
+  
+      <div class="card" data-aos="zoom-in">
+        <h3>Usage Volume</h3>
+        <p>How does ChatGPT usage volume vary across academic majors?</p>
+      </div>
+  
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        <h3>Interaction Patterns</h3>
+        <p>How do interaction patterns with ChatGPT differ across majors?</p>
+      </div>
+  
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
+        <h3>Temporal Behavior</h3>
+        <p>How do temporal usage patterns of ChatGPT differ across majors?</p>
+      </div>
+  
+      <div class="card" data-aos="zoom-in" data-aos-delay="300">
+        <h3>Prompt Complexity</h3>
+        <p>How does prompt complexity vary across majors?</p>
+      </div>
+  
+    </div>
+  </section>
 
-<!-- DATA -->
-<section id="data" class="section dark">
-  <h2>Data Description</h2>
+  <!-- DATA DESCRIPTION -->
+  <section class="section dark">
+    <h2 data-aos="fade-up">Data Description</h2>
 
-  <div class="card">
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <p>
+        This project uses a dataset of ChatGPT conversation logs collected from students across multiple academic majors, including Math/Engineering, Physics, Physics/Engineering, Physics-Math, and Biology.
+        Only user messages are included in the analysis, where each record represents an individual prompt sent by a student during a ChatGPT conversation.
+      </p>
+  
+      <p style="margin-top: 15px;">
+        The dataset focuses on user-generated content to analyze how students interact with ChatGPT across different academic disciplines.
+      </p>
+    </div>
+  
+    <h3 data-aos="fade-up" style="margin-top: 30px;">Data Scope</h3>
+  
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <p>
+        To ensure fair comparison across majors, the analysis is restricted to the period:
+      </p>
+  
+      <p style="font-weight: bold; font-size: 1.2rem; margin: 10px 0;">
+        September 2025 – March 2026
+      </p>
+  
+      <p>
+        This time window standardizes usage across all groups and avoids bias from uneven data collection periods.
+      </p>
+    </div>
+  </section>
+
+  <!-- DATA PREPROCESSING -->
+<div class="pipeline">
+
+  <div class="step-card" data-aos="fade-up" data-step="1">
+    <div class="step-number">1</div>
+    <div class="step-content">
+      <h3>Raw Data Cleaning</h3>
+      <p>Extracted and cleaned ChatGPT conversation logs to isolate user-generated messages.</p>
+    </div>
+  </div>
+
+  <div class="step-card" data-aos="fade-up" data-step="2">
+    <div class="step-number">2</div>
+    <div class="step-content">
+      <h3>Feature Engineering</h3>
+      <p>Added time-based features to enable temporal usage analysis.</p>
+    </div>
+  </div>
+
+  <div class="step-card" data-aos="fade-up" data-step="3">
+    <div class="step-content">
+      <h3>Multi-Major Standardization</h3>
+      <p>Ensured consistent formatting across all six academic majors for fair comparison.</p>
+    </div>
+  </div>
+
+  <div class="step-card" data-aos="fade-up" data-step="4">
+    <div class="step-number">4</div>
+    <div class="step-content">
+      <h3>Dataset Integration</h3>
+      <p>Merged all majors into a unified dataframe for cross-group analysis.</p>
+    </div>
+  </div>
+
+  <div class="step-card" data-aos="fade-up" data-step="5">
+    <div class="step-number">5</div>
+    <div class="step-content">
+      <h3>Time Window Filtering</h3>
+      <p>Filtered data to September 2025 – March 2026 to ensure temporal consistency.</p>
+    </div>
+  </div>
+
+</div>
+
+    <!-- Usage Volume -->
+
+    <section class="section">
+    <h2 data-aos="fade-up">Usage Volume</h2>
+  
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <p>
+        This bar chart shows the total number of ChatGPT user messages across different academic majors from Sep 2025 to Mar 2026.
+      </p>
+  
+      <p style="margin-top: 10px;">
+        <strong>Key takeaway:</strong> A Math-engineering student had the highest usage with 2,121 messages, followed by Physics-engineering (1,656) and Physics (831). Biology (286), Physics-math (325), and Computer Science (57) show comparatively lower message counts. Overall, engineering-related majors show the highest engagement.
+      </p>
+    </div>
+  
+    <!-- Your chart goes here -->
+    <div data-aos="zoom-in">
+    <iframe src="usage_volume.html" width="100%" height="600"></iframe>
+    </div>
+  </section>
+
+
+        <!-- interaction patterns -->
+
+  <section class="section dark">
+    <h2 data-aos="fade-up">Interaction Patterns</h2>
+  
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <p>
+        This treemap shows the distribution of ChatGPT usage patterns within each major, broken down into different learning behavior clusters.
+      </p>
+  
+      <p style="margin-top: 10px;">
+        <strong>Key takeaway:</strong> Most majors rely heavily on Step-by-Step Learning & Clarification and Applied Problem Solving & Lab Reports, while advanced equation solving and strategy-based clusters are less common across all groups.
+      </p>
+    </div>
+
+      <!-- CLUSTER RESULTS -->
+  <section class="section dark">
+    <h2 data-aos="fade-up">Cluster Analysis Results</h2>
+  
+    <div class="table-container" data-aos="fade-up" data-aos-delay="100">
+      <table class="cluster-table">
+        <thead>
+          <tr>
+            <th>Cluster</th>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+  
+        <tbody>
+          <tr>
+            <td>Cluster 0</td>
+            <td>Conceptual STEM Understanding</td>
+            <td>Focused on understanding why math/physics concepts work, especially differential equations, electricity, and conceptual explanations.</td>
+          </tr>
+  
+          <tr>
+            <td>Cluster 1</td>
+            <td>Applied Problem Solving & Lab Reports</td>
+            <td>Contains long homework problems, physics labs, differential equation applications, and report-writing tasks.</td>
+          </tr>
+  
+          <tr>
+            <td>Cluster 2</td>
+            <td>Step-by-Step Learning & Clarification</td>
+            <td>Mostly short follow-up questions asking for detailed explanations, examples, and walkthroughs.</td>
+          </tr>
+  
+          <tr>
+            <td>Cluster 3</td>
+            <td>Advanced Equation Solving Practice</td>
+            <td>Heavy focus on solving differential equations, IVPs, systems, substitutions, and procedural calculus practice.</td>
+          </tr>
+  
+          <tr>
+            <td>Cluster 4</td>
+            <td>Strategy, Interpretation & Study Guidance</td>
+            <td>Questions about how to know which method to use, interpreting graphs/slope fields, study confusion, and conceptual guidance.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  
+    <div data-aos="zoom-in">
+    <iframe src="interaction_patterns.html" width="100%" height="600"></iframe>
+    </div>
+  </section>
+
+      <!-- Temproal Behavior -->
+
+  <section class="section">
+    <h2 data-aos="fade-up">Temporal Behavior</h2>
+  
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <p>
+        This line chart shows hourly ChatGPT usage distribution across majors, normalized as proportions of total usage.
+      </p>
+  
+      <p style="margin-top: 10px;">
+        <strong>Key takeaway:</strong> Usage peaks during daytime and afternoon hours (around 12 PM–6 PM) across most majors. Engineering majors show stronger late-afternoon usage, while Biology and Physics show more distributed patterns.
+      </p>
+    </div>
+  
+    <div data-aos="zoom-in">
+    <iframe src="temporal_behavior.html" width="100%" height="600"></iframe>
+    </div>
+  </section>
+
+      <!-- Prompt Complexity -->
+
+  <section class="section dark">
+  <h2 data-aos="fade-up">Prompt Complexity</h2>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="100">
     <p>
-      Dataset includes ChatGPT conversation logs from multiple majors including Math/Engineering, Physics, and Biology.
+      This box plot shows the distribution of prompt lengths across academic majors, where each point represents the length of a student’s ChatGPT prompt.
+    </p>
+
+    <p style="margin-top: 10px;">
+      <strong>Key takeaway:</strong> Computer Science shows the longest and most variable prompts, while Physics-engineering and Biology tend to have shorter and more consistent prompts. Other majors fall in between with moderate variability.
     </p>
   </div>
 
-  <h3>Data Scope</h3>
-
-  <div class="card">
-    <p><b>September 2025 – March 2026</b></p>
-    <p>Standardized time window for fair comparison across majors.</p>
-  </div>
-
-  <h3 style="margin-top:30px;">Data Preprocessing Pipeline</h3>
-
-  <div class="pipeline">
-
-    <div class="step-card">
-      <div class="step-number">1</div>
-      <div class="step-content">
-        <h3>Raw Data Cleaning</h3>
-        <p>Extracted user messages from raw logs.</p>
-      </div>
-    </div>
-
-    <div class="step-card">
-      <div class="step-number">2</div>
-      <div class="step-content">
-        <h3>Feature Engineering</h3>
-        <p>Added time-based features.</p>
-      </div>
-    </div>
-
-    <div class="step-card">
-      <div class="step-number">3</div>
-      <div class="step-content">
-        <h3>Standardization</h3>
-        <p>Unified formatting across majors.</p>
-      </div>
-    </div>
-
-    <div class="step-card">
-      <div class="step-number">4</div>
-      <div class="step-content">
-        <h3>Dataset Merge</h3>
-        <p>Combined all majors into one dataset.</p>
-      </div>
-    </div>
-
-    <div class="step-card">
-      <div class="step-number">5</div>
-      <div class="step-content">
-        <h3>Time Filtering</h3>
-        <p>Filtered to consistent time range.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- USAGE -->
-<section id="usage" class="section">
-  <h2>Usage Volume</h2>
-
-  <div class="card">
-    <p>Total messages across majors: 5,276</p>
-  </div>
-
-  <iframe src="usage_volume.html" width="100%" height="600"></iframe>
-</section>
-
-<!-- INTERACTION -->
-<section id="interaction" class="section dark">
-  <h2>Interaction Patterns</h2>
-
-  <div class="card">
-    <p>Treemap shows clustering of student behavior patterns.</p>
-  </div>
-
-  <iframe src="interaction_patterns.html" width="100%" height="600"></iframe>
-</section>
-
-<!-- TEMPORAL -->
-<section id="temporal" class="section">
-  <h2>Temporal Behavior</h2>
-
-  <div class="card">
-    <p>Usage peaks during daytime hours across majors.</p>
-  </div>
-
-  <iframe src="temporal_behavior.html" width="100%" height="600"></iframe>
-</section>
-
-<!-- COMPLEXITY -->
-<section id="complexity" class="section dark">
-  <h2>Prompt Complexity</h2>
-
-  <div class="card">
-    <p>Computer Science shows longest prompts.</p>
-  </div>
-
+  <div data-aos="zoom-in">
   <iframe src="prompt_complexity.html" width="100%" height="600"></iframe>
-</section>
-
-<!-- INSIGHT -->
-<section id="insight" class="section">
-  <h2>Key Insight</h2>
-
-  <div class="card">
-    <p>Usage differs more in interaction style than volume.</p>
   </div>
 </section>
+  
+  <!-- KEY INSIGHT -->
+  <section class="section dark">
+    <h2 data-aos="fade-up">Key Insight</h2>
+  
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <p>
+        The most interesting finding is that ChatGPT usage differs more in how students interact than in how often they use it.
+      </p>
+  
+      <p>
+        Math-Engineering and Physics-Engineering students generate the highest message volume and tend to write longer, more detailed prompts, suggesting step-by-step problem solving behavior.
+      </p>
+  
+      <p>
+        In contrast, Biology and Physics students generally use shorter and more concise prompts.
+        Computer Science stands out with relatively few but extremely long prompts, indicating more focused but intensive usage sessions.
+      </p>
+  
+      <p style="margin-top: 10px;">
+        Overall, while usage timing appears similar across majors, interaction style varies significantly across disciplines.
+      </p>
+    </div>
+  </section>
+  
+ <!-- New techinique -->
+  
+    <section class="section">
+    <h2 data-aos="fade-up">New Technique: Text Clustering (TF-IDF + K-Means)</h2>
+  
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+  
+      <p>
+        This technique was used to uncover hidden patterns in unstructured ChatGPT messages.
+      </p>
+  
+      <p>
+        First, messages were converted into numerical form using TF-IDF, keeping the top 500 most important words while reducing noise.
+      </p>
+  
+      <p>
+        Next, K-Means clustering (k=5) grouped similar messages into clusters representing different types of student prompts.
+      </p>
+  
+      <p>
+        Finally, a normalized cross-tabulation by major was created to compare how different academic groups distribute across clusters.
+      </p>
+  
+      <p>
+        A treemap visualization was used to display hierarchical proportions of cluster usage across majors.
+      </p>
+  
+    </div>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  Built by Jenny Lim • CS-215 Final Project
-</footer>
+      <!--Limitation -->
 
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
+    <section class="section">
+    <h2 data-aos="fade-up">Limitations</h2>
+  
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <p>
+        This dataset is based on a limited number of students per major and is not a fully representative sample of each academic discipline.
+        As a result, the findings may not generalize to all students within these majors.
+      </p>
+  
+      <p style="margin-top: 10px;">
+        Additionally, students use a variety of AI tools beyond ChatGPT, such as Claude and Google Gemini.
+        Therefore, this analysis reflects only ChatGPT usage patterns, not overall AI usage behavior.
+      </p>
+    </div>
+  </section>
 
-  const sections = document.querySelectorAll(".section");
-  const navLinks = document.querySelectorAll(".sticky-nav a");
+    <!-- Future work -->
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(link => {
-          link.classList.remove("active");
-          if (link.getAttribute("href").replace("#","") === entry.target.id) {
-            link.classList.add("active");
-          }
-        });
-      }
-    });
-  }, { threshold: 0.3 });
+    <section class="section dark">
+    <h2 data-aos="fade-up">Future Work</h2>
+  
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <p>
+        With more time and data, I would collect a larger and more diverse set of ChatGPT conversation logs across multiple majors and a wider range of students.
+      </p>
+  
+      <p>
+        This would improve representativeness and allow for a more accurate understanding of how different academic backgrounds influence AI interaction styles.
+      </p>
+    </div>
+  </section>
 
-  sections.forEach(sec => observer.observe(sec));
-</script>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Built by Jenny Lim • Final Project CS-215</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 </html>
