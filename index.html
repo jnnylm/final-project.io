@@ -122,6 +122,88 @@
       </ul>
     </div>
   </section>
+
+    <!-- Usage Volume -->
+
+    <section class="section">
+    <h2 data-aos="fade-up">Usage Volume</h2>
+  
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <p>
+        This bar chart shows the total number of ChatGPT user messages across different academic majors from Sep 2025 to Mar 2026.
+      </p>
+  
+      <p style="margin-top: 10px;">
+        <strong>Key takeaway:</strong> A Math-engineering student had the highest usage with 2,121 messages, followed by Physics-engineering (1,656) and Physics (831). Biology (286), Physics-math (325), and Computer Science (57) show comparatively lower message counts. Overall, engineering-related majors show the highest engagement.
+      </p>
+    </div>
+  
+    <!-- Your chart goes here -->
+    <div data-aos="zoom-in">
+    <iframe src="usage_volume.html" width="100%" height="600"></iframe>
+    </div>
+  </section>
+
+
+        <!-- interaction patterns -->
+
+  <section class="section dark">
+    <h2 data-aos="fade-up">Interaction Patterns</h2>
+  
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <p>
+        This treemap shows the distribution of ChatGPT usage patterns within each major, broken down into different learning behavior clusters.
+      </p>
+  
+      <p style="margin-top: 10px;">
+        <strong>Key takeaway:</strong> Most majors rely heavily on Step-by-Step Learning & Clarification and Applied Problem Solving & Lab Reports, while advanced equation solving and strategy-based clusters are less common across all groups.
+      </p>
+    </div>
+  
+    <div data-aos="zoom-in">
+    <iframe src="interaction_patterns.html" width="100%" height="600"></iframe>
+    </div>
+  </section>
+
+      <!-- Temproal Behavior -->
+
+  <section class="section">
+    <h2 data-aos="fade-up">Temporal Behavior</h2>
+  
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <p>
+        This line chart shows hourly ChatGPT usage distribution across majors, normalized as proportions of total usage.
+      </p>
+  
+      <p style="margin-top: 10px;">
+        <strong>Key takeaway:</strong> Usage peaks during daytime and afternoon hours (around 12 PM–6 PM) across most majors. Engineering majors show stronger late-afternoon usage, while Biology and Physics show more distributed patterns.
+      </p>
+    </div>
+  
+    <div data-aos="zoom-in">
+    <iframe src="temporal_behavior.html" width="100%" height="600"></iframe>
+    </div>
+  </section>
+
+      <!-- Prompt Complexity -->
+
+  <section class="section dark">
+  <h2 data-aos="fade-up">Prompt Complexity</h2>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="100">
+    <p>
+      This box plot shows the distribution of prompt lengths across academic majors, where each point represents the length of a student’s ChatGPT prompt.
+    </p>
+
+    <p style="margin-top: 10px;">
+      <strong>Key takeaway:</strong> Computer Science shows the longest and most variable prompts, while Physics-engineering and Biology tend to have shorter and more consistent prompts. Other majors fall in between with moderate variability.
+    </p>
+  </div>
+
+  <div data-aos="zoom-in">
+  <iframe src="prompt_complexity.html" width="100%" height="600"></iframe>
+  </div>
+</section>
   
   <!-- PROJECT DETAILS -->
   <section class="section">
@@ -133,6 +215,8 @@
       <li>Animation and user experience design</li>
     </ul>
   </section>
+
+  
 
   <!-- CLUSTER RESULTS -->
   <section class="section dark">
@@ -180,6 +264,36 @@
           </tr>
         </tbody>
       </table>
+    </div>
+  </section>
+
+  <!-- New techinique -->
+  
+    <section class="section">
+    <h2 data-aos="fade-up">New Technique: Text Clustering (TF-IDF + K-Means)</h2>
+  
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+  
+      <p>
+        This technique was used to uncover hidden patterns in unstructured ChatGPT messages.
+      </p>
+  
+      <p>
+        First, messages were converted into numerical form using TF-IDF, keeping the top 500 most important words while reducing noise.
+      </p>
+  
+      <p>
+        Next, K-Means clustering (k=5) grouped similar messages into clusters representing different types of student prompts.
+      </p>
+  
+      <p>
+        Finally, a normalized cross-tabulation by major was created to compare how different academic groups distribute across clusters.
+      </p>
+  
+      <p>
+        A treemap visualization was used to display hierarchical proportions of cluster usage across majors.
+      </p>
+  
     </div>
   </section>
 
