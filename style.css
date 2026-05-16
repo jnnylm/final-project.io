@@ -294,3 +294,20 @@ footer {
   transform: scale(1.02);
   transition: 0.3s ease;
 }
+
+.step-card {
+  color: #111827;
+}
+
+.step-content h3 {
+  color: #111827;
+  font-weight: 700;
+}
+
+.step-content p {
+  color: #374151;
+}
+
+.stats-table td {
+  color: #111827;
+}
