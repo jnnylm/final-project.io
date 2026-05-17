@@ -10,9 +10,10 @@ The analysis explores how prompt types differ by major and reveals trends in pro
 - math_engineering_user_df.csv – ChatGPT usage data for Math/Engineering students
 - physics_user_df.csv – ChatGPT usage data for Physics students
 - bio_user_df.csv – ChatGPT usage data for Biology students
-- physics_math_user_df.csv – Combined Physics & Math dataset
-- physics_engineering_user_df.csv – Combined Physics & Engineering dataset
+- physics_math_user_df.csv – ChatGPT usage data for Physics & Math dataset
+- physics_engineering_user_df.csv – ChatGPT usage data for Physics & Engineering dataset
 - cs_user_df.csv – ChatGPT usage data for Computer Science students
+- filtered_df.csv - cleaned and preprocessed dataset containing filtered ChatGPT conversation records used for analysis in this project.
 - combine.ipynb – Main Colab notebook containing data processing, clustering, and visualizations
 - CS-215 Final Project.ipynb - Colab notebook containing personal (Individual) data processing, clustering, and visualizations
 
